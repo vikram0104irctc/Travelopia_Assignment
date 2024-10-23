@@ -3,6 +3,7 @@ import "./App.css";
 import { Sidebar } from "./components/Sidebar";
 import { FlightBoard } from "./components/FlightBoard";
 import FlightDetails from "./pages/FlightDetails";
+import { NavigateHome } from "./pages/notfound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/history" element={<FlightBoard />} />
           <Route path="/tickets" element={<FlightBoard />} />
           <Route path="/flight/:id" element={<FlightDetails />} />
+          <Route path="*" element={<NavigateHome />} />
         </Routes>
       </div>
     </>
