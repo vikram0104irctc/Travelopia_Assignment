@@ -11,8 +11,8 @@ To run the Flight Tracking Application locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone <repository-url>
-   cd Travelopia_Assignment/flight_status_board
+   git clone https://github.com/vikram0104irctc/Travelopia_Assignment.git
+   cd flight_status_board
    ```
 
 2. **Install the required packages**:
