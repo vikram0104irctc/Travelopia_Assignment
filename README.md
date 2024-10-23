@@ -49,26 +49,25 @@ Travelopia_Assignment/
 │   │   ├── components/
 │   │   │   ├── FlightCard.tsx
 │   │   │   ├── FlightTable.tsx
+|   |   |   |── FlightBoard.tsx
 │   │   │   ├── Navbar.tsx
 │   │   │   ├── Sidebar.tsx
 │   │   ├── pages/
 │   │   │   ├── FlightDetails.tsx
-│   │   │   ├── Home.tsx
-│   │   │   ├── History.tsx
-│   │   │   ├── Tickets.tsx
+│   │   │   ├── notfound.tsx
 │   │   ├── redux/
-│   │   │   ├── action.ts
-│   │   │   ├── reducer.ts
-│   │   │   ├── store.ts
+│   │   │   ├── action.tsx
+│   │   │   ├── reducer.tsx
+│   │   │   ├── store.tsx
 │   │   ├── utils/
-│   │   │   ├── formatDate.ts
+│   │   │   ├── formatDate.tsx
 │   │   ├── App.tsx
 │   │   ├── main.tsx
 │   ├── public/
-│   │   ├── index.html
 │   │   ├── favicon.ico
+|   |── index.html
 │   ├── package.json
-│   ├── README.md
+|── ── README.md
 ```
 
 - _src/_: The main source folder containing all application code.
