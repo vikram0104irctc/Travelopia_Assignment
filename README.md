@@ -35,6 +35,9 @@ To run the Flight Tracking Application locally, follow these steps:
 
    The build files will be generated in the `build` folder.
 
+## Presentation
+- https://youtu.be/EUgqYX5OljA
+
 ## Project Structure
 
 The project consists of the following main directories and files:
