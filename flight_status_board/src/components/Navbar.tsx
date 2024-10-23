@@ -1,20 +1,10 @@
 import { CiSearch } from "react-icons/ci";
 import { CiMenuFries } from "react-icons/ci";
 import { useDispatch } from "react-redux";
-import { dataUpdate } from "../redux/action";
+import { dataType, dataUpdate } from "../redux/action";
 import toast from 'react-hot-toast';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
-interface dataType {
-  id: number,
-  flightNumber: string,
-  airline: string,
-  origin: string,
-  destination: string,
-  departureTime: string,
-  status: string,
-}
 
 export const Navbar = () => {
   let dispatch = useDispatch();
@@ -48,6 +38,7 @@ export const Navbar = () => {
         });
     }
   }
+
   return (
     <nav className="w-full flex justify-between">
       <div className="flex gap-2 justify-center">

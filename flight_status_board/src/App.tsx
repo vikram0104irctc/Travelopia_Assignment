@@ -14,8 +14,6 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<FlightBoard />} />
-          <Route path="/history" element={<FlightBoard />} />
-          <Route path="/tickets" element={<FlightBoard />} />
           <Route path="/flight/:id" element={<FlightDetails />} />
           <Route path="*" element={<NavigateHome />} />
         </Routes>

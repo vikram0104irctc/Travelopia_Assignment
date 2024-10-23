@@ -4,17 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { IoMdAirplane } from "react-icons/io";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import toast from 'react-hot-toast';
-import { getFormatedTime, getFormatedTimeRandom } from "../utils/formateDate";
-
-interface FlightData {
-  id: number;
-  flightNumber: string;
-  airline: string;
-  origin: string;
-  destination: string;
-  departureTime: string;
-  status: string;
-}
+import { getFormatedTime, getFormatedTimeRandom, getStatusColor } from "../utils/formateDate";
+import { dataType } from "../redux/action";
 
 const FlightDetails = () => {
 
@@ -22,7 +13,7 @@ const FlightDetails = () => {
 
   const navigate = useNavigate();
 
-  const [flightData, setFlightData] = useState<FlightData | null>(null);
+  const [flightData, setFlightData] = useState<dataType | null>(null);
 
   const fetchData = () => {
     axios
@@ -55,14 +46,14 @@ const FlightDetails = () => {
         <div className="bg-white shadow-md p-6 rounded-2xl w-[100%] md:w-[60%]">
           <div className="flex flex-col md:flex-row justify-between md:items-center py-2">
             <div>
-              <h2 className="font-bold text-xl">Emirates</h2>
+              <h2 className="font-bold text-xl">{flightData?.airline}</h2>
               <p className="text-gray-400 text-md">10 Hours 30 Minutes</p>
             </div>
             <div className="flex gap-2 items-center mt-2 md:mt-0">
               <span className="px-3 py-1 text-blue-700 bg-[#c4daf07c] rounded-full">
                 Direct Flight
               </span>
-              <span className={`px-3 py-1 text-blue-700 bg-[#c4daf07c] rounded-full`}>
+              <span className={`px-3 py-1 rounded-full ${getStatusColor(flightData?.status ?? 'text-blue-700 bg-[#c4daf07c]')}`}>
                 {flightData?.status}
               </span>
             </div>

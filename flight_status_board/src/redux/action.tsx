@@ -1,7 +1,7 @@
 export const SET_FLIGHT_DATA: string = "SET_FLIGHT_DATA";
 export const SET_RECENT_FLIGHT_DATA: string = "SET_RECENT_FLIGHT_DATA";
 
-interface dataType {
+export interface dataType {
   id: number,
   flightNumber: string,
   airline: string,

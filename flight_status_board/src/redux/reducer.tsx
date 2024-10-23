@@ -1,23 +1,13 @@
-import { SET_FLIGHT_DATA, SET_RECENT_FLIGHT_DATA } from "./action";
+import { dataType, SET_FLIGHT_DATA, SET_RECENT_FLIGHT_DATA } from "./action";
 
-interface FlightData {
-  id: number;
-  flightNumber: string;
-  airline: string;
-  origin: string;
-  destination: string;
-  departureTime: string;
-  status: string;
+export interface FlightState {
+  flightData: dataType[];
+  recentFlightData: dataType[];
 }
 
-interface FlightState {
-  flightData: FlightData[];
-  recentFlightData: FlightData[];
-}
-
-interface SetFlightDataAction {
+export interface SetFlightDataAction {
   type: string;
-  payload: FlightData[];
+  payload: dataType[];
 }
 
 const initState: FlightState = {

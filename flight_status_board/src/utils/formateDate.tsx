@@ -26,3 +26,24 @@ export function getFormatedTimeRandom(formattedTime: string): string {
   return newFormattedTime;
 }
 
+export function nameShortner(str: string): string {
+  const words = str.split(" ");
+  const firstLetter = words[0].charAt(0).toUpperCase();
+  const secondLetter = words[0].charAt(1).toUpperCase();
+  const number = words[1][words[1].length - 1];
+  return `${firstLetter}${secondLetter}${number}`;
+}
+
+export const getStatusColor = (status: string) => {
+  switch (status) {
+    case "Boarding":
+      return "bg-green-500 text-white";
+    case "On Time":
+      return "bg-blue-500 text-white";
+    case "Delayed":
+      return "bg-red-500 text-white";
+    default:
+      return "bg-gray-300";
+  }
+};
+
