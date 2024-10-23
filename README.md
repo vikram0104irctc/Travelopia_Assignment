@@ -4,6 +4,9 @@
 
 The Flight Tracking Application is a web-based platform built with React and Redux, designed to provide users with real-time flight status information. It allows users to search for flights, view flight details, and navigate through different sections of the application seamlessly.
 
+## Presentation
+- https://youtu.be/EUgqYX5OljA
+
 ## Installation and Usage
 
 To run the Flight Tracking Application locally, follow these steps:
@@ -34,9 +37,6 @@ To run the Flight Tracking Application locally, follow these steps:
    ```
 
    The build files will be generated in the `build` folder.
-
-## Presentation
-- https://youtu.be/EUgqYX5OljA
 
 ## Project Structure
 
