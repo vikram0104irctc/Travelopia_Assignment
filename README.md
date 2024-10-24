@@ -31,7 +31,13 @@ To run the Flight Tracking Application locally, follow these steps:
 
    The application will be running at `http://localhost:3000/`.
 
-4. **Build the application**:
+4. **Test the application**:
+
+   ```bash
+   npm run test
+   ```
+
+5. **Build the application**:
 
    ```bash
    npm run build

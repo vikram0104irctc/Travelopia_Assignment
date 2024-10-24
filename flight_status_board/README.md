@@ -4,6 +4,10 @@
 
 The Flight Tracking Application is a web-based platform built with React and Redux, designed to provide users with real-time flight status information. It allows users to search for flights, view flight details, and navigate through different sections of the application seamlessly.
 
+## Presentation
+
+- https://youtu.be/EUgqYX5OljA
+
 ## Installation and Usage
 
 To run the Flight Tracking Application locally, follow these steps:
@@ -11,8 +15,8 @@ To run the Flight Tracking Application locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone <repository-url>
-   cd Travelopia_Assignment/flight_status_board
+   git clone https://github.com/vikram0104irctc/Travelopia_Assignment.git
+   cd flight_status_board
    ```
 
 2. **Install the required packages**:
@@ -27,7 +31,13 @@ To run the Flight Tracking Application locally, follow these steps:
 
    The application will be running at `http://localhost:3000/`.
 
-4. **Build the application**:
+4. **Test the application**:
+
+   ```bash
+   npm run test
+   ```
+
+5. **Build the application**:
 
    ```bash
    npm run build
@@ -46,26 +56,25 @@ Travelopia_Assignment/
 │   │   ├── components/
 │   │   │   ├── FlightCard.tsx
 │   │   │   ├── FlightTable.tsx
+|   |   |   |── FlightBoard.tsx
 │   │   │   ├── Navbar.tsx
 │   │   │   ├── Sidebar.tsx
 │   │   ├── pages/
 │   │   │   ├── FlightDetails.tsx
-│   │   │   ├── Home.tsx
-│   │   │   ├── History.tsx
-│   │   │   ├── Tickets.tsx
+│   │   │   ├── notfound.tsx
 │   │   ├── redux/
-│   │   │   ├── action.ts
-│   │   │   ├── reducer.ts
-│   │   │   ├── store.ts
+│   │   │   ├── action.tsx
+│   │   │   ├── reducer.tsx
+│   │   │   ├── store.tsx
 │   │   ├── utils/
-│   │   │   ├── formatDate.ts
+│   │   │   ├── formatDate.tsx
 │   │   ├── App.tsx
 │   │   ├── main.tsx
 │   ├── public/
-│   │   ├── index.html
 │   │   ├── favicon.ico
+|   |── index.html
 │   ├── package.json
-│   ├── README.md
+|── ── README.md
 ```
 
 - _src/_: The main source folder containing all application code.
@@ -94,6 +103,8 @@ _Key Features_:
 - Search input that triggers API calls to fetch flight data.
 - Displays the search results dynamically as the user types.
 
+  ![alt text](./src/assets/Navbar.png)
+
 ### 2. Sidebar
 
 _Purpose_: The Sidebar offers navigation links to different sections of the application, enhancing user experience.  
@@ -103,6 +114,8 @@ _Links_:
 - _History_: Takes users to their flight history (to be implemented).
 - _Tickets_: Accesses users’ ticket information (to be implemented).
 
+  ![alt text](./src/assets/Sidebar.png)
+
 ### 3. FlightCard
 
 _Purpose_: The FlightCard component displays a summary of individual flights.  
@@ -110,6 +123,8 @@ _Key Features_:
 
 - Shows the airline, status, origin, destination, and formatted departure time.
 - Visual indicators for flight status using colored badges.
+
+  ![alt text](./src/assets/FlighCard.png)
 
 ### 4. FlightTable
 
@@ -120,6 +135,8 @@ _Key Features_:
 - Displays flight number, airline, origin, destination, departure time, and status.
 - Color-coded status indicators for better visibility.
 
+  ![alt text](./src/assets/FlighTable.png)
+
 ### 5. FlightDetails
 
 _Purpose_: Displays detailed information about a selected flight.  
@@ -127,6 +144,8 @@ _Key Features_:
 
 - Shows airline name, flight duration, and detailed departure/arrival information.
 - Displays a visual representation of the flight route.
+
+  ![alt text](./src/assets/FlightDetails.png)
 
 ## Redux Integration
 
