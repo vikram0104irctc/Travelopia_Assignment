@@ -5,6 +5,7 @@
 The Flight Tracking Application is a web-based platform built with React and Redux, designed to provide users with real-time flight status information. It allows users to search for flights, view flight details, and navigate through different sections of the application seamlessly.
 
 ## Presentation
+
 - https://youtu.be/EUgqYX5OljA
 
 ## Installation and Usage
@@ -96,6 +97,8 @@ _Key Features_:
 - Search input that triggers API calls to fetch flight data.
 - Displays the search results dynamically as the user types.
 
+  ![alt text](./flight_status_board/src/assets/Navbar.png)
+
 ### 2. Sidebar
 
 _Purpose_: The Sidebar offers navigation links to different sections of the application, enhancing user experience.  
@@ -105,6 +108,8 @@ _Links_:
 - _History_: Takes users to their flight history (to be implemented).
 - _Tickets_: Accesses users’ ticket information (to be implemented).
 
+  ![alt text](./flight_status_board/src/assets/Sidebar.png)
+
 ### 3. FlightCard
 
 _Purpose_: The FlightCard component displays a summary of individual flights.  
@@ -112,6 +117,8 @@ _Key Features_:
 
 - Shows the airline, status, origin, destination, and formatted departure time.
 - Visual indicators for flight status using colored badges.
+
+  ![alt text](./flight_status_board/src/assets/FlighCard.png)
 
 ### 4. FlightTable
 
@@ -122,6 +129,8 @@ _Key Features_:
 - Displays flight number, airline, origin, destination, departure time, and status.
 - Color-coded status indicators for better visibility.
 
+  ![alt text](./flight_status_board/src/assets/FlighTable.png)
+
 ### 5. FlightDetails
 
 _Purpose_: Displays detailed information about a selected flight.  
@@ -129,6 +138,8 @@ _Key Features_:
 
 - Shows airline name, flight duration, and detailed departure/arrival information.
 - Displays a visual representation of the flight route.
+
+  ![alt text](./flight_status_board/src/assets/FlightDetails.png)
 
 ## Redux Integration
 
