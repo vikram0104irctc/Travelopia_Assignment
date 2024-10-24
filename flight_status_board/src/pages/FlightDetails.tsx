@@ -31,6 +31,25 @@ const FlightDetails = () => {
     fetchData();
   }, [id]);
 
+  let departuretime = flightData?.departureTime && getFormatedTime(flightData.departureTime);
+  let randomtime = flightData?.departureTime && getFormatedTimeRandom(flightData.departureTime);
+  let dhour = Number(departuretime?.split(" ")[0].split(":")[0]);
+  let dmin = Number(departuretime?.split(" ")[0].split(":")[1]);
+  let rhour = Number(randomtime?.split(" ")[0].split(":")[0]);
+  let rmin = Number(randomtime?.split(" ")[0].split(":")[1]);
+  let hour = Math.abs(rhour - dhour);
+  let min = Math.abs(rmin - dmin);
+  if (min > 59) {
+    min = min % 60;
+    hour++;
+  }
+  if (hour > 23) {
+    hour = hour % 24;
+  }
+  let formattedHour = String(hour).padStart(2, '0');
+  let formattedMin = String(min).padStart(2, '0');
+
+
   return (
     <>
       <main className="bg-[#ebf5fe] rounded-2xl mt-4 px-4 py-6 min-h-[95vh] w-full flex justify-center items-center">
@@ -47,7 +66,7 @@ const FlightDetails = () => {
           <div className="flex flex-col md:flex-row justify-between md:items-center py-2">
             <div>
               <h2 className="font-bold text-xl">{flightData?.airline}</h2>
-              <p className="text-gray-400 text-md">10 Hours 30 Minutes</p>
+              <p className="text-gray-400 text-md">{formattedHour} Hours {formattedMin} Minutes</p>
             </div>
             <div className="flex gap-2 items-center mt-2 md:mt-0">
               <span className="px-3 py-1 text-blue-700 bg-[#c4daf07c] rounded-full">
@@ -63,12 +82,12 @@ const FlightDetails = () => {
               <div className="flex flex-col">
                 <span className="font-semibold">Departure</span>
                 <span className="text-gray-800 text-sm">
-                  {flightData?.departureTime && getFormatedTime(flightData.departureTime)}
+                  {departuretime}
                 </span>
               </div>
               <div className="flex flex-col">
                 <span className="font-semibold">Arrival</span>
-                <span className="text-gray-800 text-sm">{flightData?.departureTime && getFormatedTimeRandom(flightData.departureTime)}</span>
+                <span className="text-gray-800 text-sm">{randomtime}</span>
               </div>
             </div>
             <div className="flex flex-col gap-1 items-center">
@@ -85,7 +104,7 @@ const FlightDetails = () => {
               </div>
               <div>
                 <span className="bg-neutral-100 border-gray-300 border rounded-xl py-1 px-3 md:text-xs text-[10px]">
-                  10 Hours 30 Minutes
+                  {formattedHour} Hours {formattedMin} Minutes
                 </span>
               </div>
               <div className="flex flex-col">
